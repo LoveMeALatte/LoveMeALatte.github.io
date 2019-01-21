@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+    <html lang="ro">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Cafenea Bucuresti Sector 1">
+        <meta name="author" content="">
+
+        <title>Love Me A Latte</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.2.3/css/simple-line-icons.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+       
+
+
+        <style>
+         body {font-family: Karla;}
+         
+
+
+h1{
+      color:#000;
+      font-size: 36px; /*36px*/
+      font-family: 'Karla', sans-serif;
+      font-weight: 300;
+      text-align: center;
+  }
+  p{
+      color:#000;
+      font-size:20px;
+      font-family: 'Karla', sans-serif;
+      font-weight: normal;
+      text-align: center;
+    }
+   .video{
+    display: block;
+    margin: 15px auto;
+/*    padding-top: 15px;*/
+}
+.button {
+  background-color: #C0916B;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 17px;
+  margin: 0 auto;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+.button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+#footer {
+        background: #C0916B;
+        text-align: center;
+        padding: 35px 0;
+        color: #FFF;
+    }
+
+    .copyright {
+        margin: 0;
+        color: #FFF;
+    }
+
+    .copyright a{
+        border-bottom: 1px dotted #fff;
+    }
+
+    #footer span{
+        animation-iteration-count: infinite;
+        -webkit-animation-iteration-count: infinite;
+        color: #ff5252;
+    }
+    .social-links {
+        list-style: none;
+        padding: 0;
+        margin: 5px 0 3px;
+    }
+
+    .social-links li {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    .social-links a {
+        width: 36px;
+        height: 36px;
+        color: rgba(139,69,19);
+        display: block;
+        line-height: 35px;
+        text-align: center;
+        border: 3px solid rgba(255, 255, 255, .3);
+        -webkit-border-radius: 3px;
+           -moz-border-radius: 3px;
+                border-radius: 3px;
+        font-size: 14px;
+    }
+
+    .social-links a:hover {
+        border: 1px solid rgba(255, 255, 255, .5);
+        color: rgba(255, 255, 255, .8);
+    }
+    .container-box{
+        max-width: 980px;
+        margin: 2% auto 0;
+        padding: 0 20px;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        position: relative;
+       }
+       .container-box.vertical{
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+       }
+         .box{
+        width: 25%;
+        margin: 10px 0;
+        padding: 10px;
+        display: flex;
+        /*justify-content: center;*/
+        align-items: center;
+        flex-direction: column;
+       }
+       .box img{
+        width: 230px;
+        height: 230px;
+       }
+       .box p{
+        text-align: center;
+        font-size: 20px;
+       }
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #8B4513;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+
+}
+
+#myBtn:hover {
+  background-color: #E7CFAB;
+}
+#undefined-sticky-wrapper{
+      height: auto;
+    }
+
+    .header{
+        border-bottom: 1px solid #f5f5f5;
+        position: relative;
+        width: 100%;
+        z-index: 998;
+        box-shadow: 0 0 10px rgba(0,0,0,.3);
+    }
+
+    .navbar-custom {
+        border: 0;
+        border-radius: 0;
+        margin: 0;
+        text-transform: uppercase;
+        font-family: 'Karla', sans-serif;
+    }
+
+    .navbar-custom,
+    .navbar-custom .dropdown-menu {
+        background: #C0916B;
+        padding: 0;
+        z-index: 100;
+    }
+    #custom-collapse{
+      width: 100%;
+    }
+    .navbar-nav {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    .navbar-custom .navbar-nav > li{
+      flex-grow: 1;
+    }
+
+    .navbar-custom .navbar-brand,
+    .navbar-custom .navbar-nav > li > a,
+    .navbar-custom .navbar-nav .dropdown-menu > li > a {
+        font-size: 16px;
+        letter-spacing: 1px;
+        color: #fff;
+        font-weight: 400;
+    }
+
+    .navbar-custom .nav li.active,
+    .navbar-custom .nav li a:hover,
+    .navbar-custom .nav li a:focus,
+    .navbar-custom .navbar-nav > li.active a {
+        background: none;
+        outline: 0;
+    }
+
+
+
+    .navbar-custom .navbar-brand {
+        font-weight: 700;
+        font-size: 22px;
+        font-family: 'Karla', sans-serif;
+      }
+
+    .navbar-custom .dropdown-menu {
+        border: 0;
+        border-top: 2px solid #0A4436;
+        border-radius: 0;
+        padding-top: 200px;
+    }
+
+    .navbar-custom .dropdown-menu > li > a {
+        padding: 10px 20px;
+    }
+
+    .navbar-custom .nav .open > a,
+    .navbar-custom .dropdown-menu > li > a:hover,
+    .navbar-custom .dropdown-menu > li > a:focus {
+        background: #F5F5F5;
+    }
+
+    .navbar-custom .navbar-toggle .icon-bar {
+        background: #fff;
+    }  
+
+
+    .tinyline{
+      height: 20px;
+      width: 1px;
+      margin-top:15px;
+      background: white;
+    } 
+    @media all and (min-width: 1251px){
+      .cafe-logo{
+        width: 50px;
+        position: absolute;
+        top: 0px;
+        left: -90px;
+      }  
+      }       
+        </style>
+    </head>
+    <body>
+      <header class="header">
+
+            <nav class="navbar navbar-custom" role="navigation">
+
+                <div class="container-box" style="margin: 0 auto;">
+                	<img src="LogoC.png" class="cafe-logo" alt="Logo">
+                
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#custom-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="custom-collapse">
+                
+                        <ul class="nav navbar-nav navbar-right" style="position: relative;">
+                            <li><a href="">Acasa</a></li>
+                            <div class="tinyline"></div>
+                            <li><a href="Meniu.html">Meniu</a></li>     
+                            <div class="tinyline"></div>  
+                            <li><a href="Echipa.html">Echipa</a></li>
+                            <div class="tinyline"></div>                               
+                            <li><a href="Misiune.html">Misiune</a></li>
+                            <div class="tinyline"></div>                               
+                            <li><a href="Espresso.html">Espresso</a></li>
+                            <div class="tinyline"></div>
+                            <li><a href="Istoric.html">Istoric</a></li>
+                            <div class="tinyline"></div>
+                            <li><a href="Contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                </div><!-- .container -->
+
+            </nav>
+
+        </header>
+<section>
+<div id="Acasa" class="tabcontent-one">
+ <img class="mySlides" src="1.jpg" style="width:100%">
+  <img class="mySlides" src="3.jpeg" style="width:100%">
+  <img class="mySlides" src="2.jpeg" style="width:100%">
+</div>
+<div>
+    <marquee style="font-size: 40px;">Love Me A Latte vă urează bun venit!</marquee>
+</div>
+<div>
+    <h1>Despre Noi</h1>
+    <p>Cafeneaua noastra are grija de iubitorii de cafea de pretutindeni.<br><br>
+
+Suntem pasionati de cafea si ne asiguram ca oricine ne calca pragul va beneficia de servicii de calitate, o atmosfera primitoare, personal amabil si cafea pentru toate gusturile.<br><br>
+
+Suntem de parere ca diminetile sunt mai frumoase daca incep cu o ceasca de cafea atent preparata de  Love Me A Latte.</p>
+</div>
+<div>
+   <a href="Misiune.html"> <button class="button">Aflati mai multe</button></a>
+</div>
+<div>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/vjJalABtAEo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" class="video" allowfullscreen></iframe>
+</div>
+</section>
+
+<footer id="footer">
+            <div class="container">
+                <div class="container-box">
+                        <p class="copyright">
+                            © Copyright @ 2019
+                        </p>
+                </div>
+                <div class="col-sm-12">
+
+                        <ul class="social-links">
+                            <li><a href="https://www.facebook.com/" class="wow fadeInUp" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                            <li><a href="https://www.instagram.com/" class="wow fadeInUp" target="_blank" data-wow-delay=".2s"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="https://www.twitter.com/" class="wow fadeInUp" target="_blank" data-wow-delay=".4s"><i class="fab fa-twitter"></i></a></li>
+
+                        </ul>
+                    </div>
+            </div>
+        </footer>
+<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-angle-up"></i></button>
+
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Automatic Slideshow - change image every 3 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 3000);
+}
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("myBtn").style.display = "block";
+  } else {
+    document.getElementById("myBtn").style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+$('.header').sticky({
+          topSpacing: 0
+        });
+
+        $('body').scrollspy({
+          target: '.navbar-custom',
+          offset: 70
+        })
+</script>
+    </body>
+    </html>
